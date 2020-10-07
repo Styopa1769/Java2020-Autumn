@@ -13,7 +13,7 @@ public class DogTest {
     public void getName() {
         Dog dog = new Dog();
         dog.name = "sharik";
-        assertEquals("sharik",dog.getName());
+        assertEquals("sharik", dog.getName());
         assertTrue(dog.getName().equals("sharik"));
         assertFalse(dog.getName().equals("sh"));
     }
