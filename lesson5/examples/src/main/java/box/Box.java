@@ -1,5 +1,8 @@
 package box;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Box {
     private Object value;
 
@@ -14,9 +17,22 @@ public class Box {
     public static void main(String[] args) {
         Box box = new Box();
 
-        box.setValue("value");
+        box.setValue(new Integer(0));
         Object value = box.getValue();
+        String stringValue;
 
-        System.out.println(value);
+        if (value instanceof String)
+            stringValue = (String) value;
+        else
+            stringValue = "empty";
+
+        System.out.println(stringValue);
+
+        List<Box> boxes = new ArrayList<>();
+        boxes.add(new Box());
+
+        for (Box item : boxes) {
+            System.out.println(item);
+        }
     }
 }
