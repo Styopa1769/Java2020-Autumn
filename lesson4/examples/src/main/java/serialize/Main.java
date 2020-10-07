@@ -10,8 +10,7 @@ import java.io.ObjectOutputStream;
 public class Main {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        Dog dog = new Dog();
-        dog.name = "sharik";
+        Dog dog = new Dog("sharik");
         File file = new File("dog.txt");
         try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file));
              ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file))) {
