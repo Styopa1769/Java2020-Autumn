@@ -33,9 +33,9 @@ boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!
 ```
 
 ### Разбалловка:
-1. написан класс, есть приватный конструктор и фабричный метод of() - 1б
-2. есть методы getFirst(), getSecond() - 1б
-3. переопределены equals(), hashCode(), toString() - 1б
+1. написан класс, есть приватный конструктор и фабричный метод of() - 0,5б
+2. есть методы getFirst(), getSecond() - 0,5б
+3. переопределены equals(), hashCode(), toString() - 0,5б
 
 ## Задача 2
 ### Сразу к делу. Что нужно сделать:
@@ -58,7 +58,7 @@ public static void printList(ArrayList<Integer> list) {
 ```
 
 ### Разбалловка:
-1. правильно работает main - 1б
+1. правильно работает main - 0,5б
 2. правильно работает printList - 0,5б
 
 
@@ -78,7 +78,7 @@ public static <T> Set<T> symmetricDifference(Set<? extends T> set1, Set<? extend
 ```
 
 ### Разбалловка:
-метод правильно работает для любых типов - 2б
+метод правильно работает для любых типов - 1,5б
 
 ## Задача 4
 Создать словарь (Map<String, String>) занести в него десять записей по принципу "фамилия" - "имя".
@@ -118,7 +118,7 @@ public static void main(String[] args) {
 
 ### Разбалловка:
 1. реализован createMap() - 0,5б
-2. реализован removeItemFromMapByValue() - 1б
+2. реализован removeItemFromMapByValue() - 0,5б
 3. реализован removeTheFirstNameDuplicates() - 1б
 4. реализован printMap() - 0,5б
 5. реализован main() - 0,5б
