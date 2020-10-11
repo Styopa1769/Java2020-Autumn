@@ -4,4 +4,4 @@
 
 [Видео и презентации](https://drive.google.com/drive/folders/1B6_e5hft_2O_7gjW6AHPItAr2q1UDJ4w?usp=sharing "Видео и презентации")
 
-Моя почта: shc-stepan@yandex.ru
+Для сдачи домашних заданий желательно заполнить анкету: https://forms.gle/bMLg1cgo8hz3yeP39
