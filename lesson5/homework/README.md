@@ -81,17 +81,51 @@ public static <T> Set<T> symmetricDifference(Set<? extends T> set1, Set<? extend
 метод правильно работает для любых типов - 2б
 
 ## Задача 4 (Дополнительно)
-Напишите свой ArrayList для int:
+
+Есть класс SimpleList (упрощенная реализация List):
+```java
+import java.util.NoSuchElementException;
+
+/**
+ * Упрощенная реализация List
+ */
+public interface SimpleList {
+
+    /**
+     * Добавить элемент в конец списка
+     */
+    void add(int item);
+
+    /**
+     * удалить элемент по индексу idx, если такого индекса нет или он невалидный,
+     * то бросить ошибку, если ок - вернуть удаленный элемент
+     */
+    int remove(int idx) throws NoSuchElementException;
+
+
+    /**
+     * Получить элемент с позиции idx или бросить исключение, если такого индекса нет
+     */
+    int get(int idx) throws NoSuchElementException;
+
+    /**
+     * Количество элементов списка
+     */
+    int size();
+}
+```
+
+Напишите свой ArrayList (наследник упрощенного List) для int:
 
 ```java
 /**
- * Должен наследовать List
+ * Должен наследовать SimpleList
  *
  * Должен иметь 2 конструктора
  * - без аргументов - создает внутренний массив дефолтного размера на ваш выбор
  * - с аргументом - начальный размер массива
  */
-public class MyArrayList extends List {
+public class MyArrayList implements SimpleList {
 
     public int array[];
     public int current_size;
