@@ -34,7 +34,7 @@ boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!
 
 ### Разбалловка:
 1. написан класс, есть приватный конструктор и фабричный метод of() - 0,5б
-2. есть методы getFirst(), getSecond() - 0,5б
+2. есть методы getFirst(), getSecond() - 1б
 3. переопределены equals(), hashCode(), toString() - 0,5б
 
 ## Задача 2
@@ -78,48 +78,88 @@ public static <T> Set<T> symmetricDifference(Set<? extends T> set1, Set<? extend
 ```
 
 ### Разбалловка:
-метод правильно работает для любых типов - 1,5б
+метод правильно работает для любых типов - 2б
 
-## Задача 4
-Создать словарь (Map<String, String>) занести в него десять записей по принципу "фамилия" - "имя".
-Удалить людей, имеющих одинаковые имена.
+## Задача 4 (Дополнительно)
 
-Требованияк программе:
-1. Программа не должна выводить текст на экран.
-2. Программа не должна считывать значения с клавиатуры.
-3. Метод createMap() должен создавать и возвращать словарь Map с типом элементов String, String состоящих из 10 записей.
-4. Метод removeTheFirstNameDuplicates() должен удалять из словаря всех людей, имеющие одинаковые имена.
-5. Метод removeTheFirstNameDuplicates() должен вызывать метод removeItemFromMapByValue().
-6. Метод printMap() должен выводить Map на экран.
-7. В методе main вызван createMap, над ним выполнена операция removeTheFirstNameDuplicates(), Map выведена с помощью printMap().
-
-Как будет выглядеть ваша программа (название класса на ваше усмотрение):
+Есть класс SimpleList (упрощенная реализация List):
 ```java
-public static Map<String, String> createMap() {
-  //напишите тут ваш код
-}
+import java.util.NoSuchElementException;
 
-public static void removeTheFirstNameDuplicates(Map<String, String> map) {
-  //напишите тут ваш код
-}
+/**
+ * Упрощенная реализация List
+ */
+public interface SimpleList {
 
-public static void removeItemFromMapByValue(Map<String, String> map, String value) {
-  //напишите тут ваш код
-}
+    /**
+     * Добавить элемент в конец списка
+     */
+    void add(int item);
 
-public static void printMap(Map<String,String> map){
-  //напишите тут ваш код
-}
+    /**
+     * удалить элемент по индексу idx, если такого индекса нет или он невалидный,
+     * то бросить ошибку, если ок - вернуть удаленный элемент
+     */
+    int remove(int idx) throws NoSuchElementException;
 
-public static void main(String[] args) {
-  //напишите тут ваш код
+
+    /**
+     * Получить элемент с позиции idx или бросить исключение, если такого индекса нет
+     */
+    int get(int idx) throws NoSuchElementException;
+
+    /**
+     * Количество элементов списка
+     */
+    int size();
+}
+```
+
+Напишите свой ArrayList (наследник упрощенного List) для int:
+
+```java
+/**
+ * Должен наследовать SimpleList
+ *
+ * Должен иметь 2 конструктора
+ * - без аргументов - создает внутренний массив дефолтного размера на ваш выбор
+ * - с аргументом - начальный размер массива
+ */
+public class MyArrayList implements SimpleList {
+
+    public int array[];
+    public int current_size;
+    public int size;
+
+    public MyArrayList() {
+        // ваш 1й конструктор
+    }
+
+    public MyArrayList(int capacity) {
+        // ваш 2й конструктор
+    }
+
+    @Override
+    void add(int item) {
+        // ваш метод
+    }
+
+    @Override
+    int remove(int idx) throws NoSuchElementException {
+        // ваш метод
+    }
+
+    @Override
+    int size() {
+        // ваш метод
+    }
+
+    @Override
+    int get(int idx) throws NoSuchElementException{
+        // ваш метод
+    }
 }
 ```
 
 ### Разбалловка:
-1. реализован createMap() - 0,5б
-2. реализован removeItemFromMapByValue() - 0,5б
-3. реализован removeTheFirstNameDuplicates() - 1б
-4. реализован printMap() - 0,5б
-5. реализован main() - 0,5б
-
+за все задание - 2б
