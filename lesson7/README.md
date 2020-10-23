@@ -5,10 +5,6 @@
 
 - https://javarush.ru/groups/posts/1993-mnogopotochnostjh-chto-delajut-metodih-klassa-thread - многопоточность: что делают методы класса Thread​
 
-- https://javarush.ru/groups/posts/2174-v-chem-raznica-mezhdu-mjhjuteksom-monitorom-i-semaforom - в чем разница между мьютексом, монитором и семафором​
-
-- https://javarush.ru/groups/posts/1994-sinkhronizacija-potokov-operator-synchronized - cинхронизация потоков. Оператор synchronized​
-
 ### Сложно и подробно о потоках:​
 
 https://habr.com/ru/post/164487/ - многопоточность в Java​
