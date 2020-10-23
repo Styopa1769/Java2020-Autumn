@@ -44,7 +44,7 @@ public static void main(String[] args) {
 Написать свой шифратор/дешифратор для [шифра Цезаря](https://ru.wikipedia.org/wiki/%D0%A8%D0%B8%D1%84%D1%80_%D0%A6%D0%B5%D0%B7%D0%B0%D1%80%D1%8F) при помощи Map. Решения без Map приниматься не будут.
 Подсказывать не буду - баллы дополнительные, подумайте сами, как реализовать :)
 ```java
-public class CaesarCodec extends Coder {
+public class CaesarCodec implements Coder {
     
     public CaesarCodec(int key){
       //конструктор
