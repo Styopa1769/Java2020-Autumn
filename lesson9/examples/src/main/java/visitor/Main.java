@@ -10,10 +10,10 @@ public class Main {
         insurancebles.add(new Court());
         insurancebles.add(new Factory());
 
-        Visitor manager = new Manager();
+        Visitor<String> manager = new Manager();
 
         for (Insuranceble insuranceble: insurancebles) {
-            insuranceble.accept(manager);
+            System.out.println(insuranceble.accept(manager));
         }
     }
 }

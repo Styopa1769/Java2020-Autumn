@@ -1,18 +1,18 @@
 package visitor;
 
-public class Manager implements Visitor {
+public class Manager implements Visitor<String> {
     @Override
-    public void visit(Court court) {
-        System.out.println("Court");
+    public String visit(Court court) {
+        return "Court";
     }
 
     @Override
-    public void visit(Factory factory) {
-        System.out.println("Factory");
+    public String visit(Factory factory) {
+        return "Factory";
     }
 
     @Override
-    public void visit(House house) {
-        System.out.println("House");
+    public String visit(House house) {
+        return "House";
     }
 }
