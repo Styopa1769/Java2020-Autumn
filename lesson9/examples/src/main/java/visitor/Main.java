@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Insuranceble> insurancebles = new ArrayList<>();
-        insurancebles.add(new House());
-        insurancebles.add(new Court());
-        insurancebles.add(new Factory());
+        List<Insurable> insurables = new ArrayList<>();
+        insurables.add(new House());
+        insurables.add(new Court());
+        insurables.add(new Factory());
 
         Visitor<String> manager = new Manager();
 
-        for (Insuranceble insuranceble: insurancebles) {
-            System.out.println(insuranceble.accept(manager));
+        for (Insurable insurable : insurables) {
+            System.out.println(insurable.accept(manager));
         }
     }
 }

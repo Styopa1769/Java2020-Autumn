@@ -1,6 +1,6 @@
 package visitor;
 
-public class Court implements Insuranceble {
+public class Court implements Insurable {
 
     @Override
     public <T> T accept(Visitor<T> visitor) {

@@ -1,5 +1,5 @@
 package visitor;
 
-public interface Insuranceble {
+public interface Insurable {
     <T> T accept(Visitor<T> visitor);
 }
